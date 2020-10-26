@@ -9,9 +9,9 @@ import sys
 sys.path.insert(0, "..")
 
 # Location of midi files
-midi_path = Path("data/midi/maestro_2018")
+midi_path = Path("../data/midi/maestro_2018")
 # Location of preprocesssed numpy files
-data_path = Path("data/numpy")
+data_path = Path("../data/numpy")
 data_path.mkdir(parents=True, exist_ok=True)
 data_save_name = "maestro_2018_data_save.pkl"
 

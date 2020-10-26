@@ -8,8 +8,8 @@ import sys
 
 sys.path.insert(0, "..")
 
-midi_path = Path("data/midi/maestro_2018")
-data_path = Path("data/numpy")
+midi_path = Path("../data/midi/maestro_2018")
+data_path = Path("../data/numpy")
 data_save_name = "maestro_init_data_save.pkl"
 
 
