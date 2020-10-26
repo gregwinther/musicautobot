@@ -13,14 +13,18 @@ midi_path = Path("../data/midi/maestro_2018")
 data_path = Path("../data/numpy")
 data_save_name = "maestro_init_data_save.pkl"
 
-
+lr = 1e-4
+epochs = 16
+bptt = 512
 batch_size = 16
 encode_position = True
 dl_tfms = [batch_position_tfm] if encode_position else []
+
 data = load_data(
     data_path,
     data_save_name,
     bs=batch_size,
+    bptt=bptt, 
     ecode_position=encode_position,
     dl_tfms=dl_tfms,
 )
@@ -33,6 +37,6 @@ import warnings
 
 warnings.simplefilter("ignore", UserWarning)
 
-learn.fit_one_cycle(4)
+learn.fit_one_cycle(epocs, lr)
 
 learn.save("maestro_2018_model")
