@@ -1,15 +1,16 @@
+import sys
+
+sys.path.insert(0, "..")
+
 from musicautobot.numpy_encode import *
 from musicautobot.utils.file_processing import process_all, process_file
 from musicautobot.utils.midifile import *
 from musicautobot.config import *
 from musicautobot.music_transformer import *
 
-import sys
 
-sys.path.insert(0, "..")
-
-midi_path = Path("data/midi/maestro_2018")
-data_path = Path("data/numpy")
+midi_path = Path("../data/midi/maestro_2018")
+data_path = Path("../data/numpy")
 data_save_name = "maestro_init_data_save.pkl"
 
 
