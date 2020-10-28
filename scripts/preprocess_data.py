@@ -10,11 +10,12 @@ from musicautobot.music_transformer import *
 
 
 # Location of midi files
-midi_path = Path("../data/midi/maestro_2018")
+midi_path = Path("../data/midi/maestro_all")
+
 # Location of preprocesssed numpy files
 data_path = Path("../data/numpy")
 data_path.mkdir(parents=True, exist_ok=True)
-data_save_name = "maestro_2018_data_save.pkl"
+data_save_name = "maestro_all_data_save.pkl"
 
 midi_files = get_files(midi_path, ".mid", recurse=True)
 

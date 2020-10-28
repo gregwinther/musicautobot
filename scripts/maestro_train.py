@@ -9,9 +9,9 @@ from musicautobot.config import *
 from musicautobot.music_transformer import *
 
 
-midi_path = Path("../data/midi/maestro_2018")
+midi_path = Path("../data/midi/maestro_all")
 data_path = Path("../data/numpy")
-data_save_name = "maestro_2018_data_save.pkl"
+data_save_name = "maestro_all_data_save.pkl"
 
 lr = 1e-4
 epochs = 16
@@ -39,4 +39,4 @@ warnings.simplefilter("ignore", UserWarning)
 
 learn.fit_one_cycle(epochs, lr)
 
-learn.save("maestro_2018_model")
+learn.save("maestro_all_model")
