@@ -14,7 +14,7 @@ data_path = Path("../data/numpy")
 data_save_name = "maestro_all_data_save.pkl"
 
 lr = 1e-4
-epochs = 16
+epochs = 8
 bptt = 512
 batch_size = 16
 encode_position = True
@@ -32,6 +32,10 @@ data = load_data(
 config = default_config()
 config["encode_position"] = encode_position
 learn = music_model_learner(data, config=config.copy())
+
+for i, guy in enumerate(data.train_ds):
+    if guy[0].data.max() >= len(learn.data.vocab):
+        print(f"Vocab error: {i:3} {guy[0].data.max():4}") 
 
 import warnings
 
