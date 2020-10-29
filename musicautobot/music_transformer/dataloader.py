@@ -173,7 +173,7 @@ class Midi2ItemProcessorVocab(Midi2ItemProcessor):
 
     def process_one(self, item):
         item = MusicItem.from_file(item, vocab=self.vocab)
-        item.data[item.data > len(self.vocab)] = len(self.vocab) - 1
+        item.data[item.data >= len(self.vocab)] = len(self.vocab) - 1
         return item.to_idx()
 
 
