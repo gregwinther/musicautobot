@@ -1,5 +1,5 @@
 # To Run: conda env create -f environment.yml
-name: musicautobot
+name: folk_transformer
 channels:
 - fastai
 - pytorch
@@ -14,4 +14,3 @@ dependencies:
 - pip:
   - music21
   - pebble
-#  - "--editable=git+https://github.com/fastai/fastai@master"
